@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# input file
+# Input file
 INPUT=users.csv
 
 while IFS=", " read -r username password
 do
-  # Check user existance"
+  # Check user existance
   if id -u "$username" >/dev/null 2>&1; then
     echo "User $username already exists."
   # Add new user
